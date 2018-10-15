@@ -21,4 +21,7 @@ class Contoh extends Controller
    function halaman3(){
 	   return view('halamantiga');
    }
+    function Mahasiswa(){
+	   return view('mahasiswa');
+   }
 }

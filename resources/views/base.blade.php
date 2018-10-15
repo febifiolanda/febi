@@ -45,6 +45,9 @@
             <li>
                 <a href="/halamantiga">- Halaman 3</a>
             </li>
+			 <li>
+                <a href="/mahasiswa">- Mahasiswa</a>
+            </li>
         </ul>
     </aside>
 
