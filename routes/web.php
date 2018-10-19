@@ -31,3 +31,4 @@ Route::get('/view', 'Contoh@view');
 Route::get('/halaman2', 'Contoh@halaman2');
 Route::get('/halaman3', 'Contoh@halaman3');
 Route::get('/mahasiswa', 'Contoh@mahasiswa');
+Route::resource('mahasiswa','Mahasiswa');
