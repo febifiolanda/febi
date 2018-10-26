@@ -5,7 +5,7 @@
         <!-- Add Your Content Inside -->
         <div class="content">
             <!-- Remove This Before You Start -->
-            <h1>Tabel Mahasiswa</h1>
+            <h1>Tabel User</h1>
             @if(Session::has('alert-success'))
                 <div class="alert alert-success">
                     <strong>{{ \Illuminate\Support\Facades\Session::get('alert-success') }}</strong>
@@ -15,11 +15,9 @@
             <table class="table table-bordered">
                 <thead>
                 <tr>
-                    <th>NIM</th>
                     <th>Nama</th>
-                    <th>Email</th>
-                    <th>No. HP</th>
-                    <th>Alamat</th>
+                    <th>Username</th>
+                    <th>Password</th>
                     <th>Aksi</th>
                 </tr>
                 </thead>
@@ -27,16 +25,14 @@
                 @php $no = 1; @endphp
                 @foreach($data as $d)
                     <tr>
-                        <td>{{ $no++ }}</td>
                         <td>{{ $d->Nama }}</td>
-                        <td>{{ $d->Email }}</td>
-                        <td>{{ $d->NoHp }}</td>
-                        <td>{{ $d->Alamat }}</td>
+                        <td>{{ $d->Username }}</td>
+                        <td>{{ $d->Password }}</td>
                         <td>
-                            <form action="{{ route('mahasiswa.destroy', $d->id) }}" method="post">
+                            <form action="{{ route('user.destroy', $d->id) }}" method="post">
                                 {{ csrf_field() }}
                                 {{ method_field('DELETE') }}
-                                <a href="{{ route('mahasiswa.edit',$d->id) }}" class=" btn btn-sm btn-primary">Edit</a>
+                                <a href="{{ route('user.edit',$d->id) }}" class=" btn btn-sm btn-primary">Edit</a>
                                 <button class="btn btn-sm btn-danger" type="submit" onclick="return confirm('Yakin ingin menghapus data?')">Delete</button>
                             </form>
                         </td>
@@ -44,6 +40,8 @@
                 @endforeach
                 </tbody>
             </table>
+
+           
         </div>
         <!-- /.content -->
     </section>

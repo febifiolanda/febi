@@ -48,6 +48,12 @@
 			 <li>
                 <a href="/mahasiswa">- Mahasiswa</a>
             </li>
+			 <li>
+                <a href="/user">-User</a>
+            </li>
+			 <li>
+                <a href="/mahasiswa.create">- tambah mahasiswa</a>
+            </li
         </ul>
     </aside>
 
